@@ -95,7 +95,7 @@ const PaymentPage = ({ username }) => {
       description: "Test Transaction",
       image: "https://example.com/your_logo",
       order_id: orderId,
-      callback_url: "http://localhost:3000/api/razorpay",
+      callback_url: "https://buyme-chai.vercel.app/api/razorpay",
       prefill: {
         name: paymentform.name,
         email: "gaurav.kumar@example.com",
