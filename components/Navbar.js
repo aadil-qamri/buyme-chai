@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <nav className="bg-blue-950 flex justify-between md:px-4 md:h-16 items-center">
             <Link href={"/"} className="logo font-bold text-lg flex justify-center items-center">
-                <Image src="../tea.gif" width={44} height={44} alt='Image of tea'/>
+                <Image src="/tea.gif" width={44} height={44} alt='Image of tea'/>
                 <span className='text-xl md:text-base my-3 md:my-0'>Get Me a Chai!</span>
             </Link>
             <div className="relative">
@@ -42,9 +42,15 @@ const Navbar = () => {
                 </>}
                 
                 {!session && (
+                    <>
                     <Link href={"/login"} className='cursor-pointer text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>
                         Login
                     </Link>
+                    <Link href={"/modking2856"} className='cursor-pointer text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>
+                        Donate Me
+                    </Link>
+                    </>
+                    
                 )}
 
 

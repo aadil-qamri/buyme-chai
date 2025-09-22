@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center flex-col text-white h-[44vh] items-center px-5 md:px-0 text-xs md:text-base">
-        <div className="font-bold py-2 flex justify-center items-center text-3xl md:text-5xl">Get me a chai <span><Image src="./tea.gif" width={88} alt="" /></span></div>
+        <div className="font-bold py-2 flex justify-center items-center text-3xl md:text-5xl">Get me a chai <span><Image src="/tea.gif" width={88} height={88} alt="image of tea"  unoptimized/></span></div>
         <p className="text-center">A Crowdfunding Platform. Get funding by your fans and followers. Start now !</p>
         <div className="my-6">
           <Link href={"/login"}>
@@ -21,17 +21,17 @@ export default function Home() {
 
         <div className="flex gap-5 justify-around">
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <Image className="bg-slate-500 rounded-full" src="man.gif" width={88} height={88} alt="" />
+            <Image className="bg-slate-500 rounded-full" src="/man.gif" width={88} height={88} alt="Image of a man"  unoptimized/>
             <p className="font-bold text-center">Fund Yourself</p>
             <p className="text-center">Get help from your fans</p>
           </div>
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <Image className="bg-slate-500 rounded-full" src="coin.gif" width={88} height={88} alt="" />
+            <Image className="bg-slate-500 rounded-full" src="/coin.gif" width={88} height={88} alt="image of coin"  unoptimized/>
             <p className="font-bold text-center">Get Support</p>
             <p className="text-center">Get help from your fans</p>
           </div>
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <Image className="bg-slate-500 rounded-full" src="group.gif" width={88} height={88} alt="" />
+            <Image className="bg-slate-500 rounded-full" src="/group.gif" width={88} height={88} alt="image of a group"  unoptimized/>
             <p className="font-bold text-center">Work with Groups</p>
             <p className="text-center">Get help from your fans</p>
           </div>
