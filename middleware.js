@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware(req) {
-  const maintenanceMode = true; // flip to false when done
+  const maintenanceMode = process.env.MAINTENANCE_MODE; // flip to false when done
 
   const { pathname, searchParams } = req.nextUrl;
 
