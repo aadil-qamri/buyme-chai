@@ -19,6 +19,14 @@ const PaymentPage = ({ username }) => {
     amount: "",
   });
 
+
+  const getData = useCallback(async () => {
+    let user = await fetchUser(username);
+    setcurrentuser(user);
+    let dbpayment = await fetchPayments(username);
+    setpayment(dbpayment);
+  }, [username]);
+
   useEffect(() => {
     getData()
   }, [getData])
@@ -48,12 +56,7 @@ const PaymentPage = ({ username }) => {
     setpaymentform({ ...paymentform, [e.target.name]: e.target.value });
   };
 
-  const getData = useCallback(async () => {
-    let user = await fetchUser(username);
-    setcurrentuser(user);
-    let dbpayment = await fetchPayments(username);
-    setpayment(dbpayment);
-  }, [username]);
+  
 
 
 
