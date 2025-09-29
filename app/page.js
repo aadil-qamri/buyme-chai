@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center flex-col text-white h-[44vh] items-center px-5 md:px-0 text-xs md:text-base">
-        <div className="font-bold py-2 flex justify-center items-center text-3xl md:text-5xl">Get me a chai <span><Image src="/tea.gif" width={88} height={88} alt="image of tea"  unoptimized/></span></div>
+        <div className="font-bold py-2 flex justify-center items-center text-3xl md:text-5xl">Get me a chai <span><Image src="/tea.gif" width={88} height={88} alt="image of tea" unoptimized/></span></div>
         <p className="text-center">A Crowdfunding Platform. Get funding by your fans and followers. Start now !</p>
         <div className="my-6">
           <Link href={"/login"}>

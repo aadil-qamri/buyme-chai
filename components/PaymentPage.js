@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect , useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Script from "next/script";
 import Image from "next/image";
 import { fetchUser, fetchPayments } from "./actions/useractions";
@@ -21,7 +21,7 @@ const PaymentPage = ({ username }) => {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [getData])
 
   useEffect(() => {
     if (searchParams.get("paymentdone") === "true") {
@@ -37,9 +37,10 @@ const PaymentPage = ({ username }) => {
         transition: Flip,
       });
     }
-    getData()
-    router.replace(`/${username}`)
-  }, [searchParams]);
+    getData();
+    router.replace(`/${username}`);
+  }, [searchParams, getData, router, username]);
+
 
 
 
@@ -48,11 +49,11 @@ const PaymentPage = ({ username }) => {
   };
 
   const getData = useCallback(async () => {
-  let user = await fetchUser(username);
-  setcurrentuser(user);
-  let dbpayment = await fetchPayments(username);
-  setpayment(dbpayment);
-}, [username]);
+    let user = await fetchUser(username);
+    setcurrentuser(user);
+    let dbpayment = await fetchPayments(username);
+    setpayment(dbpayment);
+  }, [username]);
 
 
 
@@ -130,21 +131,21 @@ const PaymentPage = ({ username }) => {
       />
       <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="afterInteractive" />
 
-      <div className="cover w-full relative">
-        <img
-          className="object-cover w-full h-36 md:h-[350]"
-          src={currentuser.coverpic}
-          alt=""
+      <div className="w-full h-[20rem] mb-5 relative">
+        <Image
+          fill
+          src={currentuser?.coverpic || "/default-user.png"}
+          alt="cover picture"
         />
-        <div className="flex justify-center">
-          <img
-            className="shadow shadow-gray-700 rounded-lg"
-            width={100}
-            height={100}
-            src={currentuser.profilepic}
-            alt="Profile"
-          />
-        </div>
+      </div>
+      <div className="flex justify-center">
+        <Image
+          className="shadow shadow-gray-700 rounded-lg z-10"
+          width={100}
+          height={100}
+          src={currentuser.profilepic || "/default-profile.png"}
+          alt="Profile"
+        />
       </div>
 
       <div className="flex flex-col justify-center items-center info my-5 gap-2">

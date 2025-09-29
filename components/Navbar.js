@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <nav className="bg-blue-950 flex justify-between md:px-4 md:h-16 items-center">
             <Link href={"/"} className="logo font-bold text-lg flex justify-center items-center">
-                <Image src="/tea.gif" width={44} height={44} alt='Image of tea'/>
+                <Image src="/tea.gif" width={44} height={44} alt='Image of tea' unoptimized/>
                 <span className='text-xl md:text-base my-3 md:my-0'>Get Me a Chai!</span>
             </Link>
             <div className="relative">
