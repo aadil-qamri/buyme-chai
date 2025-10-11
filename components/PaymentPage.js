@@ -153,7 +153,7 @@ const PaymentPage = ({ username }) => {
 
       <div className="flex flex-col justify-center items-center info my-5 gap-2">
         <div className="font-bold text-xl">@{username}</div>
-        <div>PERMISSION BY AzureGigacyber</div>
+        <div>Buy Me a Chai</div>
         <div className="text-slate-400">
           {payment.length} Payments &bull; ₹{payment.reduce((a, b) => a + b.amount, 0) || 0} Raised &bull; {[...new Set(payment.map(p => p.name))].length} Supporters
         </div>
